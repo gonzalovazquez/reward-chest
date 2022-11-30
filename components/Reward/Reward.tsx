@@ -1,15 +1,11 @@
 import React from 'react';
 
 type RewardProps = {
-  rewardName: string,
-  currentCost: number,
-  lowestCost: number,
-  link: string,
-  unlocked: boolean
+  records: any
 }
 
 
-export const Reward = ({ records }) =>
+export const Reward = ({ records }: RewardProps ) =>
   <div className="mt-8 flex flex-col">
     <div className="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
       <div className="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
@@ -38,7 +34,7 @@ export const Reward = ({ records }) =>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-200 bg-white">
-              {records.map((reward) => (
+              {records.map((reward: any) => (
                 <tr key={reward.Name}>
                   <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">
                     {reward.Name}
