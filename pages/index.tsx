@@ -10,7 +10,11 @@ export async function getStaticProps() {
   }
 }
 
-function Home({ rewards }) {
+type RewardProps = {
+  rewards: any
+}
+
+function Home({ rewards }: RewardProps) {
   return (
     <div>
       <Head>
