@@ -11,7 +11,12 @@ export async function getStaticProps() {
 }
 
 type RewardProps = {
-  rewards: any
+  rewards: any,
+  onClick: any,
+}
+
+function increaseEnergy(name:string) {
+  console.log(name)
 }
 
 function Home({ rewards }: RewardProps) {
@@ -28,7 +33,10 @@ function Home({ rewards }: RewardProps) {
         <div className="border-b border-gray-200 pb-5">
           <h3 className="text-lg font-medium leading-6 text-gray-900">Reward Chest</h3>
         </div>
-        <Reward records={rewards} />
+        <Reward
+          records={rewards}
+          increase={increaseEnergy}
+        />
       </div>
       </main>
 
